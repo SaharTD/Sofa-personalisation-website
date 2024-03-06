@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0060)http://www.cs.nott.ac.uk/~pszbnk/Teaching/WPS/Exercise3.html -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Sofa personalisation</title>
+
+
+
+
+  <script type="text/javascript">
+    <!--
+
+	// The event handler for a radio button collection
+      function colourChoice (colour) {
+		// Produce an alert message about the chosen colour
+           alert("you chosen"+colour);
+      }
+
+	// The event handler for design choice
+      function designChoice (design) {
+		switch (design) {
+      case "Design 1":
+        document.getElmentByID("designP").value="this is desgin 1";
+        document.getElmentByID(sofaImg).src="./Sofa personalisation_files/sofa1.jpg"
+        break;
+    
+        case "Design 2":
+        document.getElmentByID("designP").value="this is desgin 2";
+        document.getElmentByID(sofaImg).src="./Sofa personalisation_files/Design2.png"
+        break;
+
+
+        case "Design 3":
+        document.getElmentByID("designP").value="this is desgin 3";
+      
+        document.getElmentByID(sofaImg).src="./Sofa personalisation_files/Design3.png"
+        break;
+
+default:alert("invalid choice");
+
+    }
+		
+      }
+
+      // -->
+    </script>
+</head>
+
+<body>
+    <h4> Choose the colour you would like: </h4>
+    <form id="form1" action="http://www.cs.nott.ac.uk/~pszbnk/Teaching/WPS/Exercise3.html">
+      <p>
+        <input type="radio" name="colourButton" value="red" onclick="colourChoice(value)">
+        Red
+        <br>
+        <input type="radio" name="colourButton" value="blue" onclick="colourChoice(value)">
+        Blue
+        <br>
+        <input type="radio" name="colourButton" value="orange"onclick="colourChoice(value)" >
+        Orange
+        <br>
+        <input type="radio" name="colourButton" value="green" onclick="colourChoice(value)">
+        Green
+      </p>
+      <br>
+      <h4> Choose the design you would like: </h4>
+	<p>
+	  <button onclick="designChoice(value)"> Design 1</button>
+	  <button onclick="designChoice(value)"> Design 2</button>
+	  <button onclick="designChoice(value)"> Design 3</button>
+	</p>
+      <p>
+        <input type="text" id="designP" value="This is Design 1">
+	  <br> <br>
+        <img src="./Sofa personalisation_files/sofa1.jpg" id="sofaImg" alt="Sofa Design 1">
+	  <br> <br>
+	  <input type="submit" value="Submit Request">
+	  <br>
+	</p>
+    </form>
+
+
+
+</body></html>
